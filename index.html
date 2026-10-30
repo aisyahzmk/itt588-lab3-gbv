@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hentikan GBV • Gender-Based Violence Awareness Malaysia</title>
+  <meta name="description" content="A comprehensive editorial awareness platform on Gender-Based Violence in Malaysia — defining abuse, statutory law enforcement, authorized enforcers, and verified crisis hotlines.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Safety Warning Strip -->
+  <aside class="safety-strip" aria-label="Urgent emergency notification">
+    <div class="wrap safety-inner">
+      <div class="safety-notice">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Immediate physical danger in Malaysia? Dial <strong>999</strong> (Police) or <strong>15999</strong> (Talian Kasih) directly.</span>
+      </div>
+      <button type="button" class="quick-exit-btn" id="btnQuickExit" title="Instantly hide this page and open weather search">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        <span>Quick Exit (ESC)</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Sticky Editorial Navigation -->
+  <header>
+    <nav class="site-nav" id="navbar" aria-label="Main navigation">
+      <div class="wrap nav-inner">
+        <a href="#home" class="brand-mark">
+          <span class="brand-title">Hentikan GBV</span>
+          <span class="brand-tag">Malaysia</span>
+        </a>
+        <button type="button" class="nav-toggle-btn" id="navToggle" aria-label="Toggle navigation menu">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#what-is" class="nav-link">What Is GBV</a></li>
+          <li><a href="#malaysia" class="nav-link">National Context</a></li>
+          <li><a href="#laws" class="nav-link">Law Enforcement</a></li>
+          <li><a href="#enforcers" class="nav-link">Enforcers</a></li>
+          <li><a href="#hotlines" class="nav-link">Hotlines</a></li>
+          <li><a href="#contact" class="nav-link nav-cta">Contact &amp; Inquiries</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- SECTION 1: HERO (Asymmetrical Two-Column Editorial Layout) -->
+    <section class="editorial-section hero-editorial" id="home">
+      <div class="wrap hero-editorial-grid">
+        <div class="hero-editorial-copy">
+          <span class="eyebrow eyebrow-pill">Gender-Based Violence Awareness | Malaysia</span>
+          <h1 class="hero-headline">
+            Everyone deserves to <em>feel safe.</em>
+          </h1>
+          <p class="hero-lead">
+            Gender-based violence persists across every level of society, yet silence and stigma often prevent survivors from seeking redress. Understanding what constitutes violence, knowing statutory rights under Malaysian law, recognizing authorized enforcers, and having immediate access to verified hotlines is essential for safety, justice, and healing.
+          </p>
+          <div class="hero-actions-row">
+            <a href="#hotlines" class="btn btn-primary">Get Help &amp; Resources</a>
+            <a href="#laws" class="btn-text-link">
+              <span>Learn about statutory laws</span>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="hero-dignity-rule">
+            "Everyone deserves to live with dignity, safety, and respect."
+          </div>
+        </div>
+
+        <div class="hero-visual-composition">
+          <div class="hero-visual-frame">
+            <div class="hero-image-wrapper">
+              <img 
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
+                alt="Women standing together in solidarity and quiet strength" 
+                class="hero-editorial-photo"
+                loading="eager"
+              >
+            </div>
+            <div class="hero-caption-tab">
+              <span>Community Solidarity &bull; Protection &bull; Recovery</span>
+              <span>Kuala Lumpur</span>
+            </div>
+          </div>
+          <div class="hero-clock-stamp" aria-live="polite">
+            <div>
+              <span class="clock-meta">Malaysian Standard Time (UTC+8)</span>
+              <div id="clockDate" style="font-size: 0.8rem; color: var(--c-charcoal); margin-top: 2px;">Loading calendar...</div>
+            </div>
+            <span class="clock-digits" id="clock">--:--:--</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: STATEMENT BANNER & SITUATIONAL AWARENESS (Where Violence Takes Place) -->
+    <section class="statement-banner">
+      <div class="wrap">
+        <p class="statement-text">
+          "Violence is never an isolated family dispute; it is a profound breach of fundamental human dignity, protected by statutory laws and public enforcement."
+        </p>
+      </div>
+    </section>
+
+    <section class="editorial-section bg-ivory" id="what-is">
+      <div class="wrap">
+        <header class="section-head-editorial">
+          <span class="eyebrow">Real-World Awareness</span>
+          <h2>What Is Gender-Based Violence?</h2>
+          <p class="section-lead-text">
+            Violence is not always physical or immediately visible. It takes root across everyday spaces. Select an environment below to explore how violence manifests and the warning signs to recognize.
+          </p>
+        </header>
+
+        <!-- Interactive Environment Pill Switcher -->
+        <div class="gbv-tabs-container">
+          <div class="tabs-nav-bar" role="tablist" aria-label="Explore GBV across environments">
+            <button type="button" class="tab-pill-btn is-active" role="tab" id="tab-home" aria-selected="true" aria-controls="panel-home" data-tab="home">
+              Behind Closed Doors
+            </button>
+            <button type="button" class="tab-pill-btn" role="tab" id="tab-work" aria-selected="false" aria-controls="panel-work" data-tab="work">
+              Workplace &amp; Campus
+            </button>
+            <button type="button" class="tab-pill-btn" role="tab" id="tab-digital" aria-selected="false" aria-controls="panel-digital" data-tab="digital">
+              Phone &amp; Social Media
+            </button>
+            <button type="button" class="tab-pill-btn" role="tab" id="tab-economic" aria-selected="false" aria-controls="panel-economic" data-tab="economic">
+              Finances &amp; Family Pressures
+            </button>
+          </div>
+
+          <!-- Tab Panel 1: Behind Closed Doors (Blush Theme) -->
+          <div class="realm-tab-panel is-active" id="panel-home" role="tabpanel" aria-labelledby="tab-home">
+            <div class="panel-inner panel-blush">
+              <div class="panel-header">
+                <span class="panel-tag">Domestic &amp; Intimate Spheres</span>
+                <h3 class="panel-headline">"It often starts with control, isolation, and jealousy before escalating into physical danger."</h3>
+                <p class="panel-summary">
+                  Home should be a sanctuary, but domestic violence thrives behind closed doors where secrecy protects the abuser. Abuse is rarely an isolated conflict — it is a sustained cycle of coercive control.
+                </p>
+              </div>
+
+              <div class="panel-cards-grid grid-3">
+                <div class="panel-subcard">
+                  <span class="subcard-pill">Spousal &amp; Family Terror</span>
+                  <h4 class="subcard-title">Domestic Violence</h4>
+                  <p class="subcard-text">
+                    Coercive, violent, or threatening behaviour committed by an intimate partner, ex-partner, or family member in the home. It often cycles between escalating tension, intimidation, and false remorse to keep a person trapped.
+                  </p>
+                </div>
+
+                <div class="panel-subcard">
+                  <span class="subcard-pill">Bodily Force</span>
+                  <h4 class="subcard-title">Physical Violence</h4>
+                  <p class="subcard-text">
+                    Direct bodily harm such as slapping, hitting, choking, physical restraint, confinement, or attacks using household objects.
+                  </p>
+                </div>
+
+                <div class="panel-subcard">
+                  <span class="subcard-pill">Mental Control</span>
+                  <h4 class="subcard-title">Emotional &amp; Psychological Abuse</h4>
+                  <p class="subcard-text">
+                    Sustained verbal belittling, gaslighting, threats of harm, and deliberately isolating someone from family and supportive friendships.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Panel 2: Workplace & Campus (Cream Theme) -->
+          <div class="realm-tab-panel" id="panel-work" role="tabpanel" aria-labelledby="tab-work" hidden>
+            <div class="panel-inner panel-cream">
+              <div class="panel-header">
+                <span class="panel-tag">Public &amp; Professional Spaces</span>
+                <h3 class="panel-headline">"Where authority and unequal power are abused to silence complaints."</h3>
+                <p class="panel-summary">
+                  Spaces meant for education, professional advancement, and public life become hostile when physical boundaries are crossed and complaints are dismissed.
+                </p>
+              </div>
+
+              <div class="panel-cards-grid grid-2">
+                <div class="panel-subcard">
+                  <span class="subcard-pill">Work &amp; Public Safety</span>
+                  <h4 class="subcard-title">Sexual Harassment</h4>
+                  <p class="subcard-text">
+                    Unwelcome sexual advances, vulgar remarks, intrusive staring, inappropriate touching, or implicit demands where career progression or academic grades are conditioned on sexual favours.
+                  </p>
+                </div>
+
+                <div class="panel-subcard">
+                  <span class="subcard-pill">Non-Consensual Violations</span>
+                  <h4 class="subcard-title">Sexual Violence</h4>
+                  <p class="subcard-text">
+                    Any sexual act or attempted assault forced upon an individual without their freely given consent, through intimidation, physical force, or intoxication, including marital rape.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Panel 3: Phone & Social Media (Lavender Theme) -->
+          <div class="realm-tab-panel" id="panel-digital" role="tabpanel" aria-labelledby="tab-digital" hidden>
+            <div class="panel-inner panel-lavender">
+              <div class="panel-header">
+                <span class="panel-tag">Digital Networks &amp; Devices</span>
+                <h3 class="panel-headline">"Technology gives abusers constant, invasive reach into personal life."</h3>
+                <p class="panel-summary">
+                  Smartphones and online platforms enable perpetrators to stalk, monitor, and humiliate survivors across physical boundaries without ever entering the room.
+                </p>
+              </div>
+
+              <div class="panel-cards-grid grid-1">
+                <div class="panel-subcard subcard-expanded">
+                  <span class="subcard-pill">Online &amp; Cyber Violence</span>
+                  <h4 class="subcard-title">Online &amp; Digital Violence</h4>
+                  <p class="subcard-text">
+                    The weaponisation of smartphones, messaging apps, and social platforms to monitor, terrorise, or publicly humiliate someone. This includes installing hidden GPS stalkerware, relentless online threats, doxxing personal addresses, and distributing private intimate photos without consent.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Panel 4: Finances & Family Pressures (Sage Theme) -->
+          <div class="realm-tab-panel" id="panel-economic" role="tabpanel" aria-labelledby="tab-economic" hidden>
+            <div class="panel-inner panel-sage">
+              <div class="panel-header">
+                <span class="panel-tag">Economic &amp; Cultural Pressures</span>
+                <h3 class="panel-headline">"Stripping away financial means and autonomy so leaving feels impossible."</h3>
+                <p class="panel-summary">
+                  Abuse is often sustained through enforced financial dependence and customary pressure, making external support and legal knowledge crucial for escape.
+                </p>
+              </div>
+
+              <div class="panel-cards-grid grid-2">
+                <div class="panel-subcard">
+                  <span class="subcard-pill">Financial Autonomy</span>
+                  <h4 class="subcard-title">Economic Abuse</h4>
+                  <p class="subcard-text">
+                    Taking away bank cards, strictly withholding money for food and medical care, or forbidding someone from working to maintain total control and dependency.
+                  </p>
+                </div>
+
+                <div class="panel-subcard">
+                  <span class="subcard-pill">Stolen Autonomy</span>
+                  <h4 class="subcard-title">Child or Forced Marriage</h4>
+                  <p class="subcard-text">
+                    Pressuring or forcing an underage minor into marriage due to debts or customary norms, cutting short their schooling, health, and personal autonomy.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Empathetic Inclusivity Note -->
+          <div class="realm-inclusivity-banner">
+            <span class="inclusivity-badge">A Note on Protection for Everyone</span>
+            <p>
+              While women and girls face the highest rates of recorded gender-based violence in Malaysia, violence impacts people of every gender, age, and background. Every person who experiences abuse deserves legal protection, dignified care, and immediate support without judgment.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: NATIONAL CONTEXT (Statistical Reality with Oversized Typography) -->
+    <section class="editorial-section bg-lavender" id="malaysia">
+      <div class="wrap">
+        <header class="section-head-editorial">
+          <span class="eyebrow">National Reality &bull; Verified Data</span>
+          <h2>The Situation in Malaysia</h2>
+          <p class="section-lead-text">
+            Domestic and gender-based violence remains severely underreported across Malaysian states. Fear of retaliation, cultural shame regarding family privacy, and gaps in legal literacy prevent thousands from accessing statutory remedies.
+          </p>
+        </header>
+
+        <div class="stats-editorial-grid">
+          
+          <div class="stat-editorial-card">
+            <div class="stat-figure-oversized">7,468</div>
+            <p class="stat-editorial-label">Domestic violence police reports officially filed in a single year across Malaysia.</p>
+            <cite class="stat-citation">Royal Malaysia Police (PDRM, 2021)</cite>
+          </div>
+
+          <div class="stat-editorial-card">
+            <div class="stat-figure-oversized">83%</div>
+            <p class="stat-editorial-label">Of domestic abuse survivors experience prolonged psychological trauma alongside physical wounds.</p>
+            <cite class="stat-citation">Women's Aid Organisation (WAO, 2020)</cite>
+          </div>
+
+          <div class="stat-editorial-card">
+            <div class="stat-figure-oversized">57%</div>
+            <p class="stat-editorial-label">Of Malaysian women surveyed reported experiencing verbal, visual, or physical sexual harassment.</p>
+            <cite class="stat-citation">YouGov &amp; Cent-GPS National Survey (2019)</cite>
+          </div>
+
+          <div class="stat-editorial-card">
+            <div class="stat-figure-oversized">1,500+</div>
+            <p class="stat-editorial-label">Crisis calls received monthly regarding family disputes, welfare crises, and domestic abuse.</p>
+            <cite class="stat-citation">Ministry of Women, Family &amp; Community (KPWKM, 2022)</cite>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: LAW ENFORCEMENT (Document-Inspired Layout) -->
+    <section class="editorial-section bg-cream" id="laws">
+      <div class="wrap">
+        <header class="section-head-editorial">
+          <span class="eyebrow">Statutory Frameworks</span>
+          <h2>Law Enforcement &amp; Legal Protection</h2>
+          <p class="section-lead-text">
+            Malaysian law provides enforceable statutory frameworks designed to penalize perpetrators, criminalize intimidation, and grant immediate civil protection orders for survivors.
+          </p>
+        </header>
+
+        <div class="statutes-docket-grid">
+          
+          <article class="statute-docket">
+            <div class="statute-header">
+              <span class="statute-act-code">Act 521</span>
+              <h3>Domestic Violence Act 1994</h3>
+            </div>
+            <p class="statute-summary">
+              Provides civil remedies and immediate protection orders for victims abused by a current spouse, former spouse, or domestic family member residing in the household.
+            </p>
+            <ul class="statute-clauses-list">
+              <li><strong>Emergency Protection Order (EPO):</strong> Issued directly within 2 hours by Social Welfare (JKM) officers, lasting 7 days without prior court hearings.</li>
+              <li><strong>Interim Protection Order (IPO):</strong> Granted by a Magistrate Court during police investigation, barring the abuser from contact.</li>
+              <li><strong>Protection Order (PO):</strong> Granted after trial or settlement, granting exclusive occupation of the residence to the survivor.</li>
+            </ul>
+          </article>
+
+          <article class="statute-docket">
+            <div class="statute-header">
+              <span class="statute-act-code">Act 574</span>
+              <h3>Penal Code Provisions</h3>
+            </div>
+            <p class="statute-summary">
+              Defines criminal investigation, police arrest authority, and prison sentences for physical assault, sexual violence, and stalking offenses.
+            </p>
+            <ul class="statute-clauses-list">
+              <li><strong>Section 354:</strong> Assault or use of criminal force with intent to outrage modesty (imprisonment up to 10 years, fine, or whipping).</li>
+              <li><strong>Section 375 &amp; 376:</strong> Rape and statutory rape (punishable with 10 to 20 years rigorous imprisonment and mandatory whipping).</li>
+              <li><strong>Section 507A (Anti-Stalking):</strong> Criminalizes repeated following, tracking with GPS, or communicating that causes distress or fear.</li>
+            </ul>
+          </article>
+
+          <article class="statute-docket">
+            <div class="statute-header">
+              <span class="statute-act-code">Act 840</span>
+              <h3>Anti-Sexual Harassment Act 2022</h3>
+            </div>
+            <p class="statute-summary">
+              Establishes a specialized statutory Tribunal for Anti-Sexual Harassment to adjudicate sexual harassment claims quickly, affordably, and confidentially.
+            </p>
+            <ul class="statute-clauses-list">
+              <li><strong>Tribunal Compensation:</strong> Can award civil compensation up to <strong>RM250,000</strong> for damages suffered.</li>
+              <li><strong>Mandatory Remedies:</strong> Compels perpetrators to issue formal written apologies and attend rehabilitation seminars.</li>
+              <li><strong>Universal Jurisdiction:</strong> Covers harassment occurring in workplaces, universities, public venues, and digital platforms.</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <div class="legal-aid-bridge-card">
+          <div class="legal-aid-content">
+            <span class="legal-aid-eyebrow">Public Legal Assistance &bull; Malaysia</span>
+            <h3 class="legal-aid-title">Need Free Legal Representation in Court?</h3>
+            <p class="legal-aid-desc">
+              While statutory summaries help you understand your legal protections, they do not replace formal courtroom advocacy. If you need a dedicated lawyer to apply for Protection Orders or represent you in legal proceedings, free and subsidized legal counsel is accessible through official bodies.
+            </p>
+          </div>
+          <div class="legal-aid-actions">
+            <a href="https://www.jbg.gov.my" target="_blank" rel="noopener noreferrer" class="legal-aid-btn">
+              <div class="legal-aid-btn-copy">
+                <span class="btn-org-name">Jabatan Bantuan Guaman (JBG)</span>
+                <span class="btn-org-sub">Prime Minister's Dept &bull; Free Legal Aid</span>
+              </div>
+              <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+
+            <a href="https://www.malaysianbar.org.my" target="_blank" rel="noopener noreferrer" class="legal-aid-btn">
+              <div class="legal-aid-btn-copy">
+                <span class="btn-org-name">Bar Council Legal Aid Centre</span>
+                <span class="btn-org-sub">Malaysian Bar &bull; Pro Bono Legal Clinics</span>
+              </div>
+              <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: ENFORCERS (Agencies & Institutional Powers) -->
+    <section class="editorial-section bg-ivory" id="enforcers">
+      <div class="wrap">
+        <header class="section-head-editorial">
+          <span class="eyebrow">Institutional Authorities</span>
+          <h2>Enforcers &amp; Authorized Agencies</h2>
+          <p class="section-lead-text">
+            These are the official governmental bodies and statutory institutions in Malaysia empowered by law to investigate crimes, execute protection orders, and provide crisis intervention.
+          </p>
+        </header>
+
+        <div class="enforcers-editorial-grid">
+          
+          <article class="enforcer-authority-block">
+            <div>
+              <div class="enforcer-meta-line">
+                <span class="enforcer-jurisdiction-label">Criminal Law &amp; Police Investigation</span>
+                <span style="font-size: 0.72rem; color: var(--c-muted);">Federal Enforcement</span>
+              </div>
+              <h4>Royal Malaysia Police (PDRM) &bull; D11 Division</h4>
+              <p class="enforcer-desc">
+                The Sexual, Women and Child Investigation Division (D11) operates specialized investigation units across all district police headquarters (IPD). They are legally mandated to execute arrests, investigate violence, gather forensic evidence, and support survivors in obtaining court IPO orders.
+              </p>
+            </div>
+            <div class="enforcer-statutory-powers">
+              <strong>Authorized Powers:</strong> Emergency patrol dispatch (999), arrest execution, forensic evidence collection, and hospital police statement intake.
+            </div>
+          </article>
+
+          <article class="enforcer-authority-block">
+            <div>
+              <div class="enforcer-meta-line">
+                <span class="enforcer-jurisdiction-label">Welfare &amp; Protective Orders</span>
+                <span style="font-size: 0.72rem; color: var(--c-muted);">Ministry of Women (KPWKM)</span>
+              </div>
+              <h4>Social Welfare Department (JKM)</h4>
+              <p class="enforcer-desc">
+                Under Act 521, authorized Social Welfare Officers (Pegawai Kebajikan Masyarakat) hold the statutory authority to issue Emergency Protection Orders (EPOs) on the spot without waiting for a Magistrate court hearing.
+              </p>
+            </div>
+            <div class="enforcer-statutory-powers">
+              <strong>Authorized Powers:</strong> Issuing 7-day EPO orders within 2 hours, government safe house placement, emergency financial aid, and child welfare custody.
+            </div>
+          </article>
+
+          <article class="enforcer-authority-block">
+            <div>
+              <div class="enforcer-meta-line">
+                <span class="enforcer-jurisdiction-label">Clinical Forensic &amp; Medical Triage</span>
+                <span style="font-size: 0.72rem; color: var(--c-muted);">Ministry of Health (KKM)</span>
+              </div>
+              <h4>One Stop Crisis Centre (OSCC)</h4>
+              <p class="enforcer-desc">
+                Operating 24/7 in the Emergency &amp; Trauma Departments of all Malaysian general hospitals, the OSCC brings medical officers, police officers, and welfare officers under one roof so survivors do not have to recount their trauma at multiple locations.
+              </p>
+            </div>
+            <div class="enforcer-statutory-powers">
+              <strong>Authorized Powers:</strong> Forensic injury documentation, clinical rape kit examination, PEP medication within 72 hours, and on-site police statement lodging.
+            </div>
+            <div style="margin-top: 14px;">
+              <button type="button" class="btn btn-outline btn-sm" id="btnLearnOscc">View OSCC Protocol Details</button>
+            </div>
+          </article>
+
+          <article class="enforcer-authority-block">
+            <div>
+              <div class="enforcer-meta-line">
+                <span class="enforcer-jurisdiction-label">Civil Redress &amp; Adjudication</span>
+                <span style="font-size: 0.72rem; color: var(--c-muted);">Statutory Tribunal</span>
+              </div>
+              <h4>Tribunal for Anti-Sexual Harassment (TAGS)</h4>
+              <p class="enforcer-desc">
+                Established following the gazetting of Act 840, the Tribunal functions as a fast-track statutory judicial body to hear sexual harassment complaints within 60 days, providing accessible civil compensation and accountability without court fees.
+              </p>
+            </div>
+            <div class="enforcer-statutory-powers">
+              <strong>Authorized Powers:</strong> Legally binding awards up to RM250,000, issuing injunctions, orders for publication of formal apologies, and criminal penalties for non-compliance.
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: HOTLINES (Carefully Structured Support Directory) -->
+    <section class="editorial-section bg-blush" id="hotlines">
+      <div class="wrap">
+        <header class="section-head-editorial">
+          <span class="eyebrow">Crisis Directory &bull; 24/7 Response</span>
+          <h2>Emergency Hotlines &amp; Support Lines</h2>
+          <p class="section-lead-text">
+            Keep these numbers saved in your phone or written down in a safe location. In Malaysia, emergency dispatch and confidential welfare hotlines operate 24 hours a day, 7 days a week.
+          </p>
+        </header>
+
+        <div class="hotline-directory-layout">
+          
+          <article class="hotline-cell emergency-priority">
+            <div>
+              <span class="hotline-badge-tag tag-red">24/7 Police Emergency</span>
+              <h4>Royal Malaysia Police (PDRM)</h4>
+              <a href="tel:999" class="hotline-call-link">999</a>
+              <p class="hotline-desc">For immediate physical danger, active violence in progress, or rapid patrol response. Request the D11 Women and Child Investigation Division.</p>
+            </div>
+            <div class="hotline-actions-row">
+              <a href="tel:999" class="btn btn-primary btn-sm">Call 999 Directly</a>
+              <a href="https://www.rmp.gov.my" target="_blank" rel="noopener noreferrer" class="btn-text-link">Official Portal &rarr;</a>
+            </div>
+          </article>
+
+          <article class="hotline-cell">
+            <div>
+              <span class="hotline-badge-tag tag-lavender">KPWKM 24/7 National Welfare</span>
+              <h4>Talian Kasih</h4>
+              <a href="tel:15999" class="hotline-call-link">15999</a>
+              <p class="hotline-desc">The national toll-free welfare line under KPWKM. Connects callers directly to welfare officers, safe shelter intake, and crisis counseling.</p>
+            </div>
+            <div class="hotline-actions-row">
+              <a href="tel:15999" class="btn btn-outline btn-sm">Call 15999</a>
+              <a href="https://wa.me/60192615999" target="_blank" rel="noopener noreferrer" class="btn-text-link">WhatsApp 019-261 5999 &rarr;</a>
+            </div>
+          </article>
+
+          <article class="hotline-cell">
+            <div>
+              <span class="hotline-badge-tag tag-lavender">Shelter &amp; Legal Support</span>
+              <h4>Women's Aid Organisation (WAO)</h4>
+              <a href="tel:0330008858" class="hotline-call-link">03-3000 8858</a>
+              <p class="hotline-desc">Confidential emergency shelters, professional trauma social workers, and court protection order assistance for domestic abuse survivors.</p>
+            </div>
+            <div class="hotline-actions-row">
+              <a href="tel:0330008858" class="btn btn-outline btn-sm">Call Helpline</a>
+              <a href="https://wa.me/60189888058" target="_blank" rel="noopener noreferrer" class="btn-text-link">WhatsApp TINA &rarr;</a>
+            </div>
+          </article>
+
+          <article class="hotline-cell">
+            <div>
+              <span class="hotline-badge-tag tag-sage">Legal Aid &amp; Counseling</span>
+              <h4>AWAM Telenita</h4>
+              <a href="tel:0162374221" class="hotline-call-link">016-237 4221</a>
+              <p class="hotline-desc">Subsidized psychosocial counseling, legal rights consultation for protection orders, and guidance on sexual harassment tribunal claims.</p>
+            </div>
+            <div class="hotline-actions-row">
+              <a href="tel:0162374221" class="btn btn-outline btn-sm">Call Telenita</a>
+              <a href="https://wa.me/60162284221" target="_blank" rel="noopener noreferrer" class="btn-text-link">WhatsApp AWAM &rarr;</a>
+            </div>
+          </article>
+
+          <article class="hotline-cell">
+            <div>
+              <span class="hotline-badge-tag tag-lavender">Emotional Crisis 24/7</span>
+              <h4>Befrienders Kuala Lumpur</h4>
+              <a href="tel:0376272929" class="hotline-call-link">03-7627 2929</a>
+              <p class="hotline-desc">Free, confidential emotional support for anyone in distress, feeling overwhelmed, or experiencing despair. Active listening 24/7.</p>
+            </div>
+            <div class="hotline-actions-row">
+              <a href="tel:0376272929" class="btn btn-outline btn-sm">Call 03-7627 2929</a>
+              <a href="https://www.befrienders.org.my" target="_blank" rel="noopener noreferrer" class="btn-text-link">Website &rarr;</a>
+            </div>
+          </article>
+
+          <article class="hotline-cell">
+            <div>
+              <span class="hotline-badge-tag tag-sage">Hospital A&amp;E Protocol</span>
+              <h4>Hospital OSCC Crisis Desk</h4>
+              <span class="hotline-call-link" style="font-size: 1.25rem;">General Hospital A&amp;E</span>
+              <p class="hotline-desc">Walk directly into the Emergency Department of any government general hospital in Malaysia and ask for the One Stop Crisis Centre.</p>
+            </div>
+            <div class="hotline-actions-row">
+              <button type="button" class="btn btn-outline btn-sm" onclick="document.getElementById('dlgOscc').showModal()">OSCC Steps</button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Download & Print Pocket Safety Card (Demonstrates document.write()) -->
+        <div class="print-docket-bar">
+          <div class="print-docket-info">
+            <h4>Printable Pocket Emergency Safety Card</h4>
+            <p>Generate a clean, printable reference docket with all verified Malaysian emergency hotlines and hospital OSCC steps.</p>
+          </div>
+          <button type="button" class="btn btn-primary" id="btnPrint">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z"/></svg>
+            <span>Download &amp; Print Card</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: CONTACT / INQUIRY (Editorial Form & Dynamic Response) -->
+    <section class="editorial-section bg-ivory" id="contact">
+      <div class="wrap">
+        <header class="section-head-editorial">
+          <span class="eyebrow">Communication &amp; Redress</span>
+          <h2>Contact &amp; Awareness Inquiries</h2>
+          <p class="section-lead-text">
+            Have a question regarding Malaysian GBV protections, need guidance on reporting protocols, or wish to submit a message of solidarity? Complete the form below.
+          </p>
+        </header>
+
+        <div class="contact-editorial-layout">
+          <!-- Form Left -->
+          <div class="contact-form-docket">
+            <form id="contactForm" novalidate>
+              
+              <div class="form-group-editorial">
+                <label for="fname" class="form-label-editorial">Full Name or Alias <span class="form-label-optional">(Optional for privacy)</span></label>
+                <input type="text" id="fname" class="form-field-editorial" placeholder="e.g. Maya or Anonymous Friend">
+              </div>
+
+              <div class="form-group-editorial">
+                <label for="femail" class="form-label-editorial">Email Address <span class="form-label-optional">(Optional)</span></label>
+                <input type="email" id="femail" class="form-field-editorial" placeholder="name@example.com">
+              </div>
+
+              <div class="form-group-editorial">
+                <label for="ftopic" class="form-label-editorial">Topic of Inquiry <span style="color: var(--c-red);">*</span></label>
+                <select id="ftopic" class="form-field-editorial" required>
+                  <option value="" disabled selected>— Select a Topic —</option>
+                  <option value="General GBV Awareness">General GBV Awareness &amp; Information</option>
+                  <option value="Law Enforcement & EPO">Law Enforcement, Police D11 &amp; Protection Orders (EPO/IPO)</option>
+                  <option value="Hospital OSCC Procedure">Hospital One Stop Crisis Centre (OSCC) Procedure</option>
+                  <option value="Supporting a Friend">How to Safely Support a Friend in Distress</option>
+                  <option value="Message of Solidarity">Message of Hope &amp; Solidarity</option>
+                </select>
+              </div>
+
+              <div class="form-group-editorial">
+                <label for="fmsg" class="form-label-editorial">Your Message or Inquiry <span style="color: var(--c-red);">*</span></label>
+                <textarea id="fmsg" rows="4" class="form-field-editorial" placeholder="Type your inquiry or message here..." required></textarea>
+              </div>
+
+              <label class="checkbox-editorial-wrapper">
+                <input type="checkbox" id="fconsent" required>
+                <span>I understand that this is an educational awareness demonstration form and my message will be safely acknowledged on this page. <span style="color: var(--c-red);">*</span></span>
+              </label>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Message</button>
+              
+              <p class="privacy-notice-editorial">
+                Privacy Assurance: This platform is an educational demonstration. Submissions are processed locally in your browser and are never transmitted to third-party databases. For immediate crisis support, please use the verified hotlines above.
+              </p>
+            </form>
+          </div>
+
+          <!-- Output Right (innerHTML Output Target) -->
+          <div class="contact-docket-side">
+            <h3>Response Docket</h3>
+            <p>Your validated submission will appear here dynamically without page reloads.</p>
+            <div id="formOutput">
+              <div class="output-awaiting-box">
+                Waiting for your message submission…
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SECTION 8: FOOTER (Dark Plum Minimal Editorial) -->
+  <footer class="site-footer-editorial">
+    <div class="wrap">
+      <div class="footer-editorial-grid">
+        <div class="footer-editorial-about">
+          <div class="footer-brand-title">Hentikan GBV Malaysia</div>
+          <p>
+            An educational initiative dedicated to ending Gender-Based Violence in Malaysia through legal literacy, institutional enforcement awareness, and verified crisis care hotlines.
+          </p>
+          <p style="font-family: var(--font-serif); font-style: italic; color: var(--c-mauve); margin-top: 10px;">
+            "Everyone deserves to live with dignity, safety, and respect."
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links-editorial">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#what-is">What Is GBV</a></li>
+            <li><a href="#malaysia">National Context</a></li>
+            <li><a href="#laws">Law Enforcement</a></li>
+            <li><a href="#enforcers">Authorized Enforcers</a></li>
+            <li><a href="#hotlines">Emergency Hotlines</a></li>
+            <li><a href="#contact">Contact &amp; Inquiries</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Emergency Numbers</div>
+          <ul class="footer-links-editorial">
+            <li><a href="tel:999">PDRM Police Emergency: <strong>999</strong></a></li>
+            <li><a href="tel:15999">Talian Kasih Welfare: <strong>15999</strong></a></li>
+            <li><a href="https://wa.me/60192615999" target="_blank" rel="noopener noreferrer">WhatsApp: <strong>019-261 5999</strong></a></li>
+            <li><a href="tel:0330008858">WAO Crisis Shelter: <strong>03-3000 8858</strong></a></li>
+            <li><a href="tel:0162374221">AWAM Telenita: <strong>016-237 4221</strong></a></li>
+            <li><a href="tel:0376272929">Befrienders KL: <strong>03-7627 2929</strong></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-editorial">
+        &copy; 2026 Hentikan GBV Malaysia &bull; Course: 2503-ITT588 Web Systems &amp; Technologies &bull; Educational Platform
+      </div>
+    </div>
+  </footer>
+
+  <!-- HTML5 POPUP DIALOGS -->
+  <!-- Dialog 1: Form Confirmation -->
+  <dialog id="dlgConfirm">
+    <div class="modal-editorial-head">
+      <h3>Message Recorded</h3>
+      <button type="button" class="modal-close-editorial" id="dlgConfirmX" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-editorial-body">
+      <p>Thank you for contributing your voice toward dignity, equality, and safety in Malaysia.</p>
+      <div class="modal-meta-row">
+        <span><strong>Topic:</strong> <span id="dlgTopic">-</span></span>
+        <span><strong>Recorded:</strong> <span id="dlgTime">-</span></span>
+      </div>
+    </div>
+    <div class="modal-editorial-foot">
+      <button type="button" class="btn btn-primary btn-sm" id="dlgConfirmOk">Continue</button>
+    </div>
+  </dialog>
+
+  <!-- Dialog 2: Quick Exit Safety Confirmation -->
+  <dialog id="dlgExit">
+    <div class="modal-editorial-head danger-tint">
+      <h3 style="color: var(--c-red);">Leave this page quickly?</h3>
+      <button type="button" class="modal-close-editorial" id="dlgExitX" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-editorial-body">
+      <p>Do you need to quickly hide this page?</p>
+      <p style="font-size: 0.86rem; color: var(--c-charcoal);">Clicking <strong>"Leave Now"</strong> will redirect this tab immediately to Google Weather search.</p>
+      <p style="font-size: 0.78rem; color: var(--c-muted); font-style: italic; margin-top: 10px;">
+        Note: This does not clear your browser history. If it is safe to do so, delete your browsing history manually afterwards.
+      </p>
+    </div>
+    <div class="modal-editorial-foot">
+      <button type="button" class="btn btn-outline btn-sm" id="dlgExitNo">Stay on Page</button>
+      <button type="button" class="btn btn-primary btn-sm" id="dlgExitYes" style="background-color: var(--c-red); border-color: var(--c-red);">Leave Now</button>
+    </div>
+  </dialog>
+
+  <!-- Dialog 3: Hospital OSCC Protocol Modal -->
+  <dialog id="dlgOscc">
+    <div class="modal-editorial-head">
+      <h3>One Stop Crisis Centre (OSCC) Protocol</h3>
+      <button type="button" class="modal-close-editorial" id="dlgOsccX" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-editorial-body">
+      <p>Every major government hospital in Malaysia provides an OSCC inside its Emergency &amp; Trauma Department:</p>
+      <ol>
+        <li><strong>Step 1:</strong> Approach the Emergency triage counter and state that you need the OSCC.</li>
+        <li><strong>Step 2:</strong> A doctor performs a confidential medical examination and documents injuries.</li>
+        <li><strong>Step 3:</strong> If within 72 hours, PEP medication and emergency contraception are administered.</li>
+        <li><strong>Step 4:</strong> A Social Welfare (JKM) officer issues an Emergency Protection Order (EPO).</li>
+        <li><strong>Step 5:</strong> Police take your statement directly in the hospital without requiring you to visit a police station.</li>
+      </ol>
+    </div>
+    <div class="modal-editorial-foot">
+      <button type="button" class="btn btn-outline btn-sm" id="dlgOsccOk">Close Protocol</button>
+    </div>
+  </dialog>
+
+  <!-- Back to Top Floating Button -->
+  <button type="button" class="back-to-top-btn" id="toTop" aria-label="Back to top">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
