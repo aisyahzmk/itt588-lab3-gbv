@@ -1,9 +1,9 @@
 # ITT588 Lab Work 3: Gender-Based Violence (GBV) Awareness Website
 
-Subject: ITT588  
-Topic: Gender-Based Violence in Malaysia  
-Student: SITI AISYAH BINTI ZAMAKSYARI
-Id Student: 2026128783
+**NAMA :** SITI AISYAH BINTI ZAMAKSYARI  
+**STUDENT ID :** 2026128783  
+**CLASS :** M3CS2514A  
+**LECTURE :** SIR SHAHADAN
 
 ---
 
