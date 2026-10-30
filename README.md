@@ -1,90 +1,78 @@
-# 2503-ITT588 Lab Work 3: Gender-Based Violence (GBV) Awareness Portal (Malaysia)
-> **Course:** ITT588 - Web Technology & Development  
-> **Lab:** Lab Work 3 (JavaScript Essentials & DOM Manipulation)  
-> **Topic:** Gender-Based Violence (GBV) in Malaysia  
-> **Architecture:** Vanilla ES6+ Modular JavaScript, Semantic HTML5, Editorial CSS Design System  
+# ITT588 Lab Work 3: Gender-Based Violence (GBV) Awareness Website
+
+Course: ITT588 - Web Technology & Development  
+Topic: Gender-Based Violence in Malaysia  
+Student: Aisyah  
 
 ---
 
-## 📌 Executive Summary & Project Purpose
+## 1. Project Overview
 
-This project is an editorial-style digital awareness and crisis-intervention web portal dedicated to **Gender-Based Violence (GBV) in Malaysia**. Designed to communicate dignity, safety, and institutional authority, it aims to:
-1. Educate the public on the 8 distinct forms of violence recognized by global and national frameworks.
-2. Demystify statutory protections under Malaysian law (Act 521, Act 574, and Act 840).
-3. Connect survivors directly with official enforcement agencies (PDRM D11, JKM, OSCC, TAGS) and verified 24/7 hotlines.
-4. Demonstrate technical mastery of core JavaScript concepts (HTML forms, `<dialog>` modals, the 4 required output methods, date/time handling, event loops, and control flow).
+This website is built for Lab 3 to raise awareness about Gender-Based Violence (GBV) in Malaysia. It explains the forms of violence, Malaysian laws, support hotlines, and authorized agencies.
+
+The website uses HTML, CSS, and vanilla JavaScript without any external libraries.
 
 ---
 
-## 🎯 Lab 3 Technical Compliance Matrix
+## 2. Lab Requirements Checklist
 
-This portal fulfills **100%** of the ITT588 Lab Work 3 rubric requirements. The table below outlines how and where each requirement is implemented:
+All lab requirements are fulfilled:
 
-| Lab Requirement | Implementation Details | Code Location |
+| Requirement | Implementation | File |
 | :--- | :--- | :--- |
-| **1. JavaScript Framework / Architecture** | Vanilla ES6+ Modular Event-Driven Architecture (framework-free, zero-dependency, clean separation of concerns). | [`script.js`](./script.js) |
-| **2. HTML Form** | `#contactForm` with 5 input fields (Name, Email, Topic Dropdown, Message Textarea, Consent Checkbox) and front-end validation. | [`index.html#L607-L646`](./index.html) |
-| **3. PopUp Dialog (`<dialog>`)** | 3 Native HTML5 dialogs managed via `.showModal()` & `.close()` (`#dlgConfirm` for form confirmation, `#dlgExit` for ESC emergency exit, `#dlgOscc` for hospital protocol). | [`index.html#L713-L766`](./index.html) & [`script.js#L214`](./script.js) |
-| **4. Output Method: `innerHTML`** | Dynamically generates a verified response docket inside `#formOutput` upon successful form submission without reloading the page. | [`script.js#L198`](./script.js) |
-| **5. Output Method: `document.write()`** | Opens a separate window to write and render the standalone **Printable Pocket Emergency Card**. | [`script.js#L289`](./script.js) |
-| **6. Output Method: `window.alert()`** | Displays browser alert dialogs when required inputs are invalid, blank, or when popup blockers are detected. | [`script.js#L152, L158, L164, L170, L237`](./script.js) |
-| **7. Output Method: `console`** | Uses `console.log()` (telemetry), `console.table()` (structured form payload), `console.warn()` (validation alerts), and `console.info()` (init status). | [`script.js#L64, L153, L189, L190, L292`](./script.js) |
-| **8. Operators** | Arithmetic (`+`), Comparison (`===`, `!==`, `<`, `>`), Logical (`&&`, `||`, `!`), Ternary (`? :`), and Nullish Coalescing (`??`). | [`script.js#L140-L186`](./script.js) |
-| **9. Control Statements** | `if...else` input validation conditionals, `return` execution guards, and `forEach` loops for nav and tab switching. | [`script.js#L150-L173, L346-L361`](./script.js) |
-| **10. Event Loop & Timers** | `setInterval(update, 1000)` running a live 1-second clock loop on the JavaScript Event Loop, plus asynchronous event callbacks. | [`script.js#L61`](./script.js) |
-| **11. Date & Time Handling** | `new Date()` combined with `toLocaleTimeString('en-MY', { timeZone: 'Asia/Kuala_Lumpur' })` and `toLocaleDateString()` for live Malaysian Standard Time (MST) and submission timestamps. | [`script.js#L38-L57, L181-L186`](./script.js) |
+| **1. JavaScript Framework / Vanilla** | Vanilla JavaScript (ES6+) with modular functions | `script.js` |
+| **2. HTML Form** | Contact form with 5 inputs (name, email, topic, message, consent) | `index.html` (Line 607) |
+| **3. PopUp Dialog** | HTML5 `<dialog>` for submission confirmation, quick exit, and OSCC info | `index.html` (Line 713) |
+| **4. Output Method: `innerHTML`** | Displays submission results in the response box | `script.js` (Line 198) |
+| **5. Output Method: `document.write()`** | Opens and prints the emergency pocket card | `script.js` (Line 289) |
+| **6. Output Method: `window.alert()`** | Shows validation warnings when form fields are empty | `script.js` (Line 152) |
+| **7. Output Method: `console`** | Logs data using `console.log()` and `console.table()` | `script.js` (Line 189) |
+| **8. Operators** | Arithmetic, comparison, logical, ternary, nullish coalescing | `script.js` |
+| **9. Control Statements** | `if...else` statements and `forEach` loops | `script.js` |
+| **10. Event Loop** | `setInterval()` runs a live clock every second | `script.js` (Line 61) |
+| **11. Date and Time** | Live Malaysian Standard Time (MST) clock and submit timestamps | `script.js` (Line 38) |
 
 ---
 
-## 💻 Deep-Dive: JavaScript Implementation Highlights
+## 3. JavaScript Code Examples
 
-### 1. The Four (4) Output Methods
+### Four Output Methods
+
 ```javascript
-// Method 1: innerHTML (Dynamically updates response docket)
+// 1. innerHTML
 output.innerHTML = `
   <div class="response-confirmed-card">
     <h4>Thank you, ${safeName}</h4>
-    <p>Topic: ${safeTopic} &bull; ${timeStr}</p>
+    <p>Topic: ${safeTopic} • ${timeStr}</p>
     <div>"${safeMsg}"</div>
   </div>
 `;
 
-// Method 2: document.write() (Generates emergency pocket card)
+// 2. document.write()
 const cardWin = window.open('', '_blank', 'width=780,height=850');
 cardWin.document.open();
 cardWin.document.write(cardHtml);
 cardWin.document.close();
 
-// Method 3: window.alert() (Validation dialog alerts)
+// 3. window.alert()
 if (!topicVal) {
   window.alert('Notice: Please select a topic of inquiry before submitting.');
   return;
 }
 
-// Method 4: console methods (Telemetry & Structured Data)
+// 4. console.log and console.table
 console.log('[FORM SUBMITTED] Contact message accepted.');
-console.table({ 'Sender': safeName, 'Topic': safeTopic, 'Timestamp': timeStr });
+console.table({
+  'Sender': safeName,
+  'Topic': safeTopic,
+  'Timestamp': timeStr
+});
 ```
 
-### 2. Operators & Control Flow
+### Date, Time & Event Loop
+
 ```javascript
-// Nullish coalescing (??) & Optional chaining (?.)
-const nameVal = document.getElementById('fname')?.value.trim() ?? '';
-
-// Ternary operator (? :)
-const displayName = nameVal !== '' ? nameVal : 'Anonymous Contributor';
-
-// Multi-condition validation using logical AND/OR/NOT (&&, ||, !)
-if (!msgVal || msgVal.length < 5) {
-  window.alert('Notice: Please write a message of at least 5 characters.');
-  console.warn('[VALIDATION] Message too short.');
-  return;
-}
-```
-
-### 3. Date, Time & Event Loop
-```javascript
-// Live Malaysian Standard Time (MST / UTC+8)
+// Live Clock updating every second
 function updateClock() {
   const now = new Date();
   const timeStr = now.toLocaleTimeString('en-MY', {
@@ -94,71 +82,40 @@ function updateClock() {
   clockEl.textContent = timeStr;
 }
 
-// Event Loop: Recurring 1-second Macrotask
+// Event Loop: runs updateClock every 1000ms
 setInterval(updateClock, 1000);
 ```
 
 ---
 
-## 🎨 UI/UX & Editorial Pastel Aesthetics
+## 4. Website Screenshots
 
-Unlike stereotypical AI-generated templates with generic cards and saturated colors, this portal features a bespoke editorial design system:
+<!-- Put your screenshots inside the screenshots/ folder with these names -->
 
-* **Warm Ivory Backgrounds:** `#FAF6F0` and `#FFFDF9` to ensure soft, glare-free readability.
-* **Soft Lavender Accents:** `#E4DFEE` and `#F0EDF6` for calm, trustworthy navigation.
-* **Dusty Blush Tints:** `#F4DFE7` and `#FAF0F4` for empathetic callouts.
-* **Deep Plum Headings:** `#39253E` and `#241528` for dignified visual contrast.
-* **Typography Pairing:**
-  * **Headings:** `Playfair Display` (Expressive, formal serif)
-  * **Body:** `DM Sans` (Clean, highly legible modern sans-serif)
-* **Interactive Environments:** A tabbed situational switcher (*Behind Closed Doors*, *Workplace & Campus*, *Phone & Social Media*, *Finances & Family Pressures*) avoiding cluttered walls of text and fitting desktop screen heights seamlessly.
+### Home / Hero Section
+![Hero Section](./screenshots/hero.png)
 
----
+### What Is GBV Section (Interactive Tabs)
+![What Is GBV](./screenshots/what-is-gbv.png)
 
-## 📂 Project Directory Structure
+### Malaysian Laws & Enforcers
+![Laws and Enforcers](./screenshots/laws.png)
 
-```text
-itt588-lab3-gbv-malaysia/
-├── index.html        # Semantic HTML5 document (Nav, Sections, Form, Dialogs)
-├── style.css         # Complete editorial CSS design system & responsive queries
-├── script.js         # Modular JavaScript engine (100% vanilla ES6+)
-└── README.md         # Full documentation & Lab 3 grading article
-```
+### Hotlines & Pocket Safety Card
+![Hotlines](./screenshots/hotlines.png)
+
+### Contact Form & Output Methods
+![Contact Form and Output](./screenshots/form-output.png)
 
 ---
 
-## 🚀 How to Run Locally
+## 5. Conclusion
 
-1. Clone or download this repository.
-2. Open `index.html` in any modern web browser (Google Chrome, Microsoft Edge, Mozilla Firefox, or Safari).
-3. Press **F12** (or Right-Click → *Inspect*) to open the **Console tab** and observe:
-   * System initialization timestamps.
-   * Structured `console.table()` outputs upon submitting the inquiry form.
-   * Validation warnings (`console.warn()`).
-4. Test the **Pocket Reference Card** by clicking **"Download & Print Card"** in the hotlines section to see `document.write()` in action.
-5. Test the **Quick Exit** feature by clicking the red button in the top bar or pressing the **ESC** key.
+This project successfully fulfills all the requirements for Lab Work 3. Through this lab, I learned how to:
+- Structure a clean, responsive web page using semantic HTML5 and custom CSS.
+- Handle user input using an HTML form and validate fields using JavaScript control statements.
+- Use native pop-up dialogs with the HTML5 `<dialog>` API.
+- Apply all four output methods (`innerHTML`, `document.write()`, `window.alert()`, and `console`).
+- Work with dates, times, and the asynchronous event loop using `setInterval()`.
 
----
-
-## 🌐 Publishing to GitHub Pages (Live Demonstration)
-
-To host this website for free and share the live link with your lecturer:
-1. Initialize git and push to your GitHub account:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: complete ITT588 Lab 3 GBV Malaysia awareness portal"
-   git branch -M main
-   git remote add origin https://github.com/<YOUR-USERNAME>/<YOUR-REPO-NAME>.git
-   git push -u origin main
-   ```
-2. In your GitHub repository, navigate to **Settings** → **Pages**.
-3. Under **Build and deployment** → **Branch**, select `main` and `/ (root)`, then click **Save**.
-4. In 1–2 minutes, your website will be live at:  
-   `https://<YOUR-USERNAME>.github.io/<YOUR-REPO-NAME>/`
-
----
-
-## ⚖️ Disclaimer & Educational Notice
-
-This platform is created solely for **academic demonstration in course ITT588**. All legal summaries regarding Malaysian statutes (Act 521, Act 574, Act 840) and crisis hotlines (PDRM 999, Talian Kasih 15999, OSCC, WAO, AWAM, Befrienders) reflect public institutional information.
+The website is fully functional, easy to navigate, and raises awareness on an important social issue in Malaysia.
