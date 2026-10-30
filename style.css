@@ -153,15 +153,19 @@ img {
   border: 1px solid rgba(177, 155, 191, 0.35);
 }
 
-/* --- Safety Exit Sticky Bar --- */
+/* --- Sticky Header & Navigation --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 18px rgba(73, 53, 79, 0.06);
+}
+
 .safety-strip {
   background-color: var(--c-plum-deep);
   color: var(--c-cream);
   font-size: 0.82rem;
   padding: 8px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -207,20 +211,17 @@ img {
 
 /* --- Editorial Navigation Bar --- */
 .site-nav {
-  background-color: rgba(250, 246, 240, 0.94);
+  background-color: rgba(250, 246, 240, 0.97);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--c-rule);
-  position: sticky;
-  top: 37px;
-  z-index: 990;
 }
 
 .nav-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 0;
+  padding: 14px 0;
 }
 
 .brand-mark {
@@ -1513,7 +1514,7 @@ dialog::backdrop {
 
   .nav-menu {
     position: fixed;
-    top: 68px;
+    top: 100%;
     left: 0;
     width: 100%;
     background-color: var(--c-ivory);
