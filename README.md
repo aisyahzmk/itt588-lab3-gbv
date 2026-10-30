@@ -88,24 +88,31 @@ setInterval(updateClock, 1000);
 
 ---
 
-## 4. Website Screenshots
+## 4. Lab 3 Implementation Screenshots
 
-<!-- Put your screenshots inside the screenshots/ folder with these names -->
+### 4.1 Output Method 1: innerHTML (Response Docket)
+Output is displayed dynamically inside `#formOutput` without page reload.
+![innerHTML Output](./screenshots/output-innerhtml.png)
 
-### Home / Hero Section
-![Hero Section](./screenshots/hero.png)
+### 4.2 Output Method 2: document.write() (Printable Pocket Card)
+Opens a new window and uses `document.write()` to generate the printable crisis support card.
+![document.write Output](./screenshots/output-document-write.png)
 
-### What Is GBV Section (Interactive Tabs)
-![What Is GBV](./screenshots/what-is-gbv.png)
+### 4.3 Output Method 3: window.alert() (Input Validation)
+Pop-up alerts warn users when required fields are empty or invalid.
+![window.alert Output](./screenshots/output-window-alert.png)
 
-### Malaysian Laws & Enforcers
-![Laws and Enforcers](./screenshots/laws.png)
+### 4.4 Output Method 4: Console (console.log & console.table)
+Telemetry and structured form submissions logged in Developer Tools console.
+![Console Output](./screenshots/output-console.png)
 
-### Hotlines & Pocket Safety Card
-![Hotlines](./screenshots/hotlines.png)
+### 4.5 Date, Time & Event Loop (Live MST Clock)
+Live Malaysian Standard Time (UTC+8) clock running via `setInterval()` and `Date` object.
+![Live Clock and Event Loop](./screenshots/date-event-loop.png)
 
-### Contact Form & Output Methods
-![Contact Form and Output](./screenshots/form-output.png)
+### 4.6 HTML Form & PopUp Dialog (<dialog>)
+The contact inquiry form and the native HTML5 `<dialog>` confirmation modal.
+![Form and Dialog](./screenshots/form-dialog.png)
 
 ---
 
